@@ -7,11 +7,12 @@ has_rooftop -> sân thượng, mặc định None
 numbers_of_floors -> số tầng, không tính tầng trệt, sân thượng, mặc định 0
 street_name -> tên đường, mặc định None
 
+# Prompt, return only the dictionary
 
 I am a data scientist, and I want to extract useful data from a description in a Vietnamese real estate post.
 I’ll provide you with that description, and you must only return the keys and values in Python dictionary format without any introduction.
 The response mustn't contain any explanation and only contain a dictionary without further explanation.
-The keys contain those properties: alleyway_property, under_mortgage, residential_purpose, has_basement, numbers_of_floors, residential_purpose
+The keys contain those properties: alleyway_property, under_mortgage, residential_purpose, furnished, has_lowerlevel, has_rooftop numbers_of_floors, street_name.
 Alleyway_property is boolean value, default is None. 
 under_mortgage is boolean value, default is None.
 residential_purpose is boolean value, default value is None, it ensures the buyer have full ownership rights for residential purposes.
