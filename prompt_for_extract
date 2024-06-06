@@ -1,20 +1,20 @@
 alleyway_property -> trong hẻm, mặc định là null
-legal_status -> hợp pháp, mặc định là 1
-under_mortgage -> có đang bị thế chấp không, mặc định 0
+under_mortgage -> có đang bị thế chấp không, mặc định 0 -> thể hiện sự ownership
+residential_purpose -> Chắc chắn nằm trên đất thổ cư, mặc định None
 has_lowerlevel -> tầng hầm, mặc định 0
 has_rooftop -> sân thượng, mặc định 0
 numbers_of_floors -> số tầng, không tính tầng trệt, sân thượng, mặc định 0
-residential_purpose -> Chắc chắn nằm trên đất thổ cư, mặc định 1
+
 
 I am a data scientist, and I want to extract useful data from a description in a Vietnamese real estate post.
 I’ll provide you with that description, and you must only return the keys and values in Python dictionary format without any introduction.
 The keys contain those properties: alleyway_property, legal_status, under_mortgage, residential_purpose, has_basement, numbers_of_floors, residential_purpose
-Alleyway_property only contains 1 or 0, default is None.
-legal_status only contains 1 or 0, default is None. 
+Alleyway_property only contains 1 or 0, default is None. 
 under_mortgage only contains 1 or 0, default is 0.
 residential_purpose  only contains 0 and 1, default value is 1, it ensures the buyer have full ownership rights for residential purposes.
 has_basement only contains 1 or 0, default is 0. has_rooftop only contains 1 or 0, default is 0.
 numbers_of_floors is a integer number, greater or equal 0, default is 0, doesn't include the ground floor and rooftoop floor.
 If the description doesn't contain enough information to determine the value of a property, the corresponding value in the dictionary should be set to default value. 
-The response mustn't contain any explanation and only contain a dictionary without further explanation.
 This is the description in Vietnamese:
+
+(The response mustn't contain any explanation and only contain a dictionary without further explanation.)
