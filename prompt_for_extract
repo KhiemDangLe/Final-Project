@@ -13,10 +13,10 @@ I am a data scientist, and I want to extract useful data from a description in a
 I’ll provide you with that description, and you must only return the keys and values in Python dictionary format without any introduction.
 The response mustn't contain any explanation and only contain a dictionary without further explanation.
 The keys contain those properties: alleyway_property, under_mortgage, residential_purpose, furnished, has_lowerlevel, has_rooftop, numbers_of_floors, street_name.
-Alleyway_property is boolean value (True/False), default is None. 
-under_mortgage is boolean value (True/False), default is None.
-residential_purpose is boolean value (True/False), default value is None, it ensures the buyer have full ownership rights for residential purposes.
-has_basement, has_rooftop, furnished are boolean values (True/False), default is None. 
+Alleyway_property is boolean value (1/0), default is None. 
+under_mortgage is boolean value (1/0), default is None.
+residential_purpose is boolean value (1/0), default value is None, it ensures the buyer have full ownership rights for residential purposes.
+has_basement, has_rooftop, furnished are boolean values (1/0), default is None. 
 numbers_of_floors is an integer number, greater or equal 0, default is 0, doesn't include the ground floor and rooftoop floor.
 street_name is a string, default is None, it represents the name of the street where the property is located in Viet Name.
 If the description doesn't contain enough information to determine the value of a property, the corresponding value in the dictionary should be set to default value. 
