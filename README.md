@@ -3,7 +3,7 @@
 * Nguồn dữ liệu: https://batdongsan.vn/
 * Mục Tiêu của Dự Án:
      * Phát triển khả năng cào dữ liệu, EDA, vẽ heatmap, xữ lí dữ liệu và feature engineering,
-     *  Phát triển một mô hình dự đoán giá với mô hình dự đoán chính xác nhất.
+     *  Phát triển một mô hình dự đoán giá với mô hình dự đoán chính xác nhất với dữ liệu do người dùng nhập vào.
      *  Có thể được sử dụng để hỗ trợ người dùng trong việc đưa ra các quyết định mua bán bất động sản, định giá căn nhà.
 
 ### 1.1. Cách tổ chức các file
