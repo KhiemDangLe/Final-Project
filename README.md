@@ -15,14 +15,17 @@
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### 1.2. Thành viên nhóm
 #### Tên Nhóm: 
-* Vũ Đăng Khôi - 
+* Vũ Đăng Khôi - 22280049 - Nhóm trưởng
 * Trảo An Huy - 22280041
 * Đặng Lê Khiêm - 22280045
-* Thái Anh Khoa - 
+* Thái Anh Khoa - 22280048
 ### 1.3. Đóng góp của các thành viên
 thêm link
 # 2. Tóm tắt quá trình thực hiện
-Link vẽ sơ đồ tóm tắt quá trình: https://github.com/KhiemDangLe/Final-Project/assets/121539558/17014389-2181-4ae0-ae6e-4cfb6ae76b90
+<div style="text-align: center;">
+    <img src="https://github.com/KhiemDangLe/Final-Project/blob/main/image/image_for_craw_data/vi_du_mot_bai_dang.png?raw=true" width="700"/>
+</div>
+
 ## 2.1 Crawl dữ liệu
 ### 2.1.1 Sơ lược về trang web
 <div style="text-align: center;">
