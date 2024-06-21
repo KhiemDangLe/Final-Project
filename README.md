@@ -9,10 +9,10 @@
   * **2_1_prompt_for_extracting.txt**: chứa prompt sử dụng để truy vấn mô hình LLM
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### 1.2. Thành viên nhóm
-* Vũ Đăng Khôi - 
+* Vũ Đăng Khôi - 22280049
 * Trảo An Huy - 
 * Đặng Lê Khiêm - 22280045
-* Thái Anh Khoa - 
+* Thái Anh Khoa - 22280048
 ### 1.3. Đóng góp của các thành viên
 thêm link
 # 2. Tóm tắt quá trình thực hiện
@@ -52,7 +52,31 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
-mọi người thêm vào đây nha
+## 2.3.1: Sơ lược về LLM
+* Các mô hình ngôn ngữ lớn (LLM) là các mô hình học sâu rất lớn, được đào tạo trước dựa trên một lượng dữ liệu khổng lồ. Bộ chuyển hóa cơ bản là tập hợp các mạng nơ-ron có một bộ mã hóa và một bộ giải mã với khả năng tự tập trung. Bộ mã hóa và bộ giải mã trích xuất ý nghĩa từ một chuỗi văn bản và hiểu mối quan hệ giữa các từ và cụm từ trong đó.
+
+## 2.3.2: Mục tiêu
+* Dùng LLM để trích xuất ra các dữ liệu dạng không cấu trúc về thành các feature, phục vụ cho việc train mô hình ở những giai đoạn sau đó.
+* Dùng LLM để trích xuất ra các thông tin có thể có được từ ‘description’ mà nó có thể không có trong các thông tin trên web. Ví dụ như trong phần mô tả có thể có thông tin về số phòng ngủ, phòng vệ sinh trong khi phần trên không có liệt kê.
+* Dùng LLM để kiểm tra tính đúng đắn của bài đăng. Ví dụ, có thể đó là một bài đăng về bán cửa sắt, vật dụng, không phải là bài đăng về bán nhà, giúp việc dự đoán chính xác hơn.
+
+## 2.3.3: Hướng thực hiện
+a. *Sử dụng API code được dùng trên Anyscale:*
+   * Tải dữ liệu cho LLM thực hiện.
+   * Sử dụng các câu lệnh yêu cầu LLM trả về các thông tin theo yêu cầu.
+
+b. *Ví dụ:*
+   * Dùng API được cung cấp sau đó cho LLM thực hiện encode cột ‘title’ và ‘description’ sau đó đưa về dạng JSON của các thông tin như sau:
+   * Sau đó truyền dữ liệu của các feature trên để tiến hành trích xuất dữ liệu.
+   * Xử lí thông tin nhận được từ LLM.
+
+c. *Xử lý thông tin nhận được:*
+   * Do thông tin nhận được từ LLM không phải lúc nào cũng giống như dạng JSON, nếu có đúng dạng thì nó vẫn có khả năng bị dư thừa một số thứ như ‘Below is the information you requested’ sẽ làm cho việc tải dữ liệu vào các cột bị lỗi. Nhóm dùng các thao tác xử lí chuỗi như Regex.
+   * Load dữ liệu nhận được vào dataframe.
+   * Thực hiện tải kết quả nhận được vào LLM vào các file.
+
+## 2.3.4: Kết quả
+* Dữ liệu thô sau khi crawl data, có thể truy cập ở đường dẫn sau: [raw_data_3_extracted_by_LLM.csv](https://github.com/KhiemDangLe/Final-Project/blob/main/1-CrawlData/raw_data_3_extracted_by_LLM.csv)
 ## 2.4. Quá trình ETL
 mọi người thêm vào đây nha
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
