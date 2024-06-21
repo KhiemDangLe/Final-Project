@@ -54,7 +54,27 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
 mọi người thêm vào đây nha
 ## 2.4. Quá trình ETL
-mọi người thêm vào đây nha
+### 2.4.1 Sơ Lược Về ETL:
+Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ liệu thô thành dữ liệu có ý nghĩa và có thể sử dụng được. Nó giúp đảm bảo dữ liệu được tích hợp, sạch sẽ và nhất quán, từ đó hỗ trợ việc phân tích và ra quyết định.
+### 2.4.2 Mục tiêu.
+*  Chuyển đổi dữ liệu từ nhiều nguồn thô thành dữ liệu có ý nghĩa và có thể sử dụng được.
+### 2.4.3 Tóm tắt cách làm
+#### 1. Extract trích xuất dữ liệu.
+      - 1.1 Trích xuất dữ liệu LLM_data từ phần LLM.
+      - 1.2 Trích xuất dữ liệu raw_data phần raw data.
+#### 2. Transform dữ liệu.
+      - 2.1 Transform cột article_id từ hai nguồn dữ liệu từ dạng float sang kiểu string.
+      - 2.2 Transform join article_id từ hai nguồn dữ liệu raw_data và LLM_data thành merged_data.
+      - 2.3 Transform cột price.
+          - 2.3.1 Loại bỏ các cột giá Thỏa Thuận và transform cột giá.
+          - 2.3.2 Cài đặt miền tối thiểu cho cột Price.
+      - 2.4 Transform cột area.
+          - 2.4.1 Thêm miền chặn dưới của cột area.
+      - 2.5 Thêm cột area_per_m2
+      - 2.6 Transform cột date_posted từ dạng object sang kiểu datetime64
+      - 2.7 Transfrom cột location sang longitude với latitude
+
+#### 3. Load Dữ liệu vào file merged data.csv.
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
 ### 2.4.1. Sơ lược về tiền xử lý dữ liệu và phân tích khám phá dữ liệu
  * Là các bước quan trọng trong quy trình xử lý và phân tích dữ liệu. Chúng giúp chuẩn bị dữ liệu và hiểu rõ hơn về dữ liệu trước khi thực hiện các mô hình phân tích hoặc học máy.  Tuy nhiên, ở phần sau của đồ án, nhóm sẽ dùng nhiều loại mô hình khác nhau để dự đoán giá nhà.Do đó, mục đích chính của quá trình tiền xử lý dữ liệu là phục vụ cho quá trình phân tích khám phá dữ liệu mà không làm thay đổi quá nhiều đặc trưng của dữ liệu.
