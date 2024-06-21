@@ -22,7 +22,9 @@
 * Đặng Lê Khiêm - 22280045
 * Thái Anh Khoa - 22280048
 ### 1.3. Đóng góp của các thành viên
-thêm link
+Đóng góp của các thành viên nhóm được thể hiện trong file **8_2_dong_gop_cua_cac_thanh_vien.pdf**
+### 1.4. Nội dung các buổi họp
+Nội dung các buổi họp được thể hiện trong file **8_1_noi_dung_cac_buoi_hop.pdf**
 # 2. Tóm tắt quá trình thực hiện
 <div style="text-align: center;">
     <img src="https://github.com/KhiemDangLe/Final-Project/blob/main/image/image_for_craw_data/quy_trinh.png?raw=true" width="70"/>
