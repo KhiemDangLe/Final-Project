@@ -1,5 +1,5 @@
 # 1. Tổng quan
-* Chủ đề : Dự đoán giá nhà
+* Chủ đề : Dự đoán giá nhà tại thành phố Hồ Chí Minh
 * Nguồn dữ liệu: https://batdongsan.vn/
 ### 1.1. Cách tổ chức các file
 * **DataFolder**: chứa dữ liệu thu thập được và dữ liệu phục vụ cho quá trình vẽ heatmap
@@ -10,7 +10,7 @@
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### 1.2. Thành viên nhóm
 * Vũ Đăng Khôi - 
-* Trảo An Huy - 
+* Trảo An Huy - 22280041
 * Đặng Lê Khiêm - 22280045
 * Thái Anh Khoa - 
 ### 1.3. Đóng góp của các thành viên
