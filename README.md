@@ -21,6 +21,7 @@
 ### 1.3. Đóng góp của các thành viên
 thêm link
 # 2. Tóm tắt quá trình thực hiện
+Link vẽ sơ đồ tóm tắt quá trình: https://github.com/KhiemDangLe/Final-Project/assets/121539558/17014389-2181-4ae0-ae6e-4cfb6ae76b90
 ## 2.1 Crawl dữ liệu
 ### 2.1.1 Sơ lược về trang web
 <div style="text-align: center;">
