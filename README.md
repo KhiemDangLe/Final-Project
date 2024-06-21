@@ -56,7 +56,24 @@ mọi người thêm vào đây nha
 ## 2.4. Quá trình ETL
 mọi người thêm vào đây nha
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
-mọi người thêm vào đây nha
+ Phần 1: Sơ lược về tiền xử lý dữ liệu và phân tích khám phá dữ liệu
+ Là các bước quan trọng trong quy trình xử lý và phân tích dữ liệu. Chúng giúp chuẩn bị dữ liệu và hiểu rõ hơn về dữ liệu trước khi thực hiện các mô hình phân tích hoặc học máy.  Tuy nhiên, ở phần sau của đồ án, nhóm sẽ dùng nhiều loại mô hình khác nhau để dự đoán giá nhà.Do đó, mục đích chính của quá trình tiền xử lý dữ liệu là phục vụ cho quá trình phân tích khám phá dữ liệu mà không làm thay đổi quá nhiều đặc trưng của dữ liệu.
+
+Phần 2: Mục tiêu
+ Tiền xử lý dữ liệu để loại bỏ đi những yếu tố chưa chính xác, không phù hợp với bài toán mà nhóm đặt ra 
+Xử lý sơ phần cột định lượng và định tính
+Thực hiện visualize để miêu tả dữ liệu
+
+Phần 3: Kế hoạch thực hiện
+Xoá những phần không phù hợp như : hàng thiếu dữ liệu,các bài viết bị đăng lại nhiều lần,  các bài đăng spam (dùng cột is_real_estate_post),các bài đăng không nằm trong phân loại bất động sản về Nhà (dùng cột category), hàng trùng lặp
+Sử dụng dữ liệu được trích xuất từ phần mô tả như bedroom , wc, area để điền vào dữ liệu bị thiếu
+Xử lý cột định lượng : Xử lý cột price_per_m2,giá trị ngoại lai
+Xử lý cột định tính: cột residential_purpose,các cột còn lại
+Thực hiện visualize dữ liệu  một thuộc tính,  2 thuộc tính và 3 thuộc tính
+
+Phần 4: Kết quả
+Ta sẽ nhận được bộ dữ liệu sạch, chuẩn hóa và nhất quán đảm bảo dữ liệu đã sẵn sàng cho các mô hình phân tích và học máy. Cũng như hiểu biết chi tiết về dữ liệu, thông qua các phân tích thống kê và trực quan, giúp định hướng cho việc lựa chọn và xây dựng mô hình phù hợp.
+
 ## 2.5. Tối ưu từng mô hình
 Mỗi thành viên nhóm sẽ chịu trách nhiệm tìm hiểu, áp dụng, tối ưu các mô hình sau:
 * Mô hình Linear Regression, Ridge Regression, Lasso Regression: Trảo An Huy
