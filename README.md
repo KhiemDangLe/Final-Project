@@ -59,10 +59,10 @@ Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ li
 ### 2.4.2 Mục tiêu.
 *  Chuyển đổi dữ liệu từ nhiều nguồn thô thành dữ liệu có ý nghĩa và có thể sử dụng được.
 ### 2.4.3 Tóm tắt cách làm
-#### 1. Extract trích xuất dữ liệu.
+#### 2.4.3.1. Extract trích xuất dữ liệu.
       - 1.1 Trích xuất dữ liệu LLM_data từ phần LLM.
       - 1.2 Trích xuất dữ liệu raw_data phần raw data.
-#### 2. Transform dữ liệu.
+#### 2.4.3.2. Transform dữ liệu.
       - 2.1 Transform cột article_id từ hai nguồn dữ liệu từ dạng float sang kiểu string.
       - 2.2 Transform join article_id từ hai nguồn dữ liệu raw_data và LLM_data thành merged_data.
       - 2.3 Transform cột price.
