@@ -1,6 +1,11 @@
 # 1. Tổng quan
 * Chủ đề : Dự đoán giá nhà tại thành phố Hồ Chí Minh
 * Nguồn dữ liệu: https://batdongsan.vn/
+* Mục Tiêu của Dự Án:
+     * Phát triển khả năng cào dữ liệu, EDA, vẽ heatmap, xữ lí dữ liệu và feature engineering,
+     *  Phát triển một mô hình dự đoán giá với mô hình dự đoán chính xác nhất.
+     *  Có thể được sử dụng để hỗ trợ người dùng trong việc đưa ra các quyết định mua bán bất động sản, định giá căn nhà.
+
 ### 1.1. Cách tổ chức các file
 * **DataFolder**: chứa dữ liệu thu thập được và dữ liệu phục vụ cho quá trình vẽ heatmap
 * **Image**: chứa hình ảnh minh họa. Các hình ảnh mình họa được chèn vào trong các file notebook
