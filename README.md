@@ -15,10 +15,10 @@
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### 1.2. Thành viên nhóm
 #### Tên Nhóm: 
-* Vũ Đăng Khôi - 
+* Vũ Đăng Khôi - 22280049
 * Trảo An Huy - 22280041
 * Đặng Lê Khiêm - 22280045
-* Thái Anh Khoa - 
+* Thái Anh Khoa - 22280048
 ### 1.3. Đóng góp của các thành viên
 thêm link
 # 2. Tóm tắt quá trình thực hiện
@@ -59,7 +59,6 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
-LLM
 ### 2.3.1  Sơ lược về LLM
 * Các mô hình ngôn ngữ lớn (LLM) là các mô hình học sâu rất lớn, được đào tạo trước dựa trên một lượng dữ liệu khổng lồ. Bộ chuyển hóa cơ bản là tập hợp các mạng nơ-ron có một bộ mã hóa và một bộ giải mã với khả năng tự tập trung. Bộ mã hóa và bộ giải mã trích xuất ý nghĩa từ một chuỗi văn bản và hiểu mối quan hệ giữa các từ và cụm từ trong đó.
 ### 2.3.2 Mục tiêu
