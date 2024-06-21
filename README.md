@@ -1,7 +1,4 @@
-> Mục lục
-> [Overview](# Overview)
-> [Thành viên nhóm] (# Thành viên nhóm)
-# Overview
+# Tổng quan
 * Chủ đề : Dự đoán giá nhà
 * Nguồn dữ liệu: https://batdongsan.vn/
 ### Cách tổ chức các file
@@ -10,13 +7,14 @@
 * Các file report: là các file Jupyter Notebook chứa code và báo cáo của từng phần trong quá trình thực hiện đồ án. Các file được đánh số theo thứ tự thực hiện. Các file thuộc cùng một quá trình sẽ được đánh dấu thêm bằng chỉ số phụ. Ví dụ: file 5_1_report_gradient_boosting là file báo cáo quá trình thực hiện mô hình Gradient Boosting. 
 * Các file khác, bao gồm:
   * **2_1_prompt_for_extracting.txt**: chứa prompt sử dụng để truy vấn mô hình LLM
-  * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà.
+  * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### Thành viên nhóm
 * Vũ Đăng Khôi - 
 * Trảo An Huy - 
 * Đặng Lê Khiêm - 22280045
 * Thái Anh Khoa - 
 ### Đóng góp của các thành viên
+thêm sau
 # Tóm tắt quá trình thực hiện
 ## Crawl dữ liệu
 ### Sơ lược về trang web
@@ -53,6 +51,8 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * direction: hướng nhà
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
+## Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
+thêm sau
 ## Tiền xử lý dữ liệu và phân tích dữ liệu
 Bổ sung sau
 ## Tối ưu từng mô hình
