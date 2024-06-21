@@ -13,8 +13,10 @@
 * Các file khác, bao gồm:
   * **2_1_prompt_for_extracting.txt**: chứa prompt sử dụng để truy vấn mô hình LLM
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
+  * **8_1_noi_dung_cac_buoi_hop.pdf**: chứa nội dung các buổi họp nhóm
+  * **8_2_dong_gop_cua_cac_thanh_vien**: chứa thông tin về đóng góp của các thành viên trong nhóm
 ### 1.2. Thành viên nhóm
-#### Tên Nhóm: 
+
 * Vũ Đăng Khôi - 22280049 - Nhóm trưởng
 * Trảo An Huy - 22280041
 * Đặng Lê Khiêm - 22280045
@@ -23,7 +25,7 @@
 thêm link
 # 2. Tóm tắt quá trình thực hiện
 <div style="text-align: center;">
-    <img src="https://github.com/KhiemDangLe/Final-Project/blob/main/image/image_for_craw_data/vi_du_mot_bai_dang.png?raw=true" width="700"/>
+    <img src="https://github.com/KhiemDangLe/Final-Project/blob/main/image/image_for_craw_data/quy_trinh.png?raw=true" width="70"/>
 </div>
 
 ## 2.1 Crawl dữ liệu
@@ -62,7 +64,6 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
-LLM
 ### 2.3.1  Sơ lược về LLM
 * Các mô hình ngôn ngữ lớn (LLM) là các mô hình học sâu rất lớn, được đào tạo trước dựa trên một lượng dữ liệu khổng lồ. Bộ chuyển hóa cơ bản là tập hợp các mạng nơ-ron có một bộ mã hóa và một bộ giải mã với khả năng tự tập trung. Bộ mã hóa và bộ giải mã trích xuất ý nghĩa từ một chuỗi văn bản và hiểu mối quan hệ giữa các từ và cụm từ trong đó.
 ### 2.3.2 Mục tiêu
@@ -80,7 +81,7 @@ LLM
 * Load dữ liệu nhận được vào dataframe
 * Thực hiện tải kết quả nhận được vào LLM vào các file
 ### 2.3.4 Kết quả
-Dữ liệu thô sau khi craw data, có thể truy cập ở đường dẫn sau: https://github.com/KhiemDangLe/Final-Project/blob/main/1-CrawlData/raw_data_3_extracted_by_LLM.csv
+Dữ liệu thô sau khi craw data, có thể truy cập ở đường dẫn sau: https://github.com/KhiemDangLe/Final-Project/blob/main/DataFolder/3_raw_data_extracted_by_LLM.csv
 
 ## 2.4. Quá trình ETL
 ### 2.4.1 Sơ Lược Về ETL:
@@ -88,55 +89,55 @@ Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ li
 ### 2.4.2 Mục tiêu.
 *  Chuyển đổi dữ liệu từ nhiều nguồn thô thành dữ liệu có ý nghĩa và có thể sử dụng được.
 ### 2.4.3 Tóm tắt cách làm
-#### 2.4.3.1. Extract trích xuất dữ liệu.
-      - 1.1 Trích xuất dữ liệu LLM_data từ phần LLM.
-      - 1.2 Trích xuất dữ liệu raw_data phần raw data.
-#### 2.4.3.2. Transform dữ liệu.
-      - 2.1 Transform cột article_id từ hai nguồn dữ liệu từ dạng float sang kiểu string.
-      - 2.2 Transform join article_id từ hai nguồn dữ liệu raw_data và LLM_data thành merged_data.
-      - 2.3 Transform cột price.
-          - 2.3.1 Loại bỏ các cột giá Thỏa Thuận và transform cột giá.
-          - 2.3.2 Cài đặt miền tối thiểu cho cột Price.
-      - 2.4 Transform cột area.
-          - 2.4.1 Thêm miền chặn dưới của cột area.
-      - 2.5 Thêm cột area_per_m2
-      - 2.6 Transform cột date_posted từ dạng object sang kiểu datetime64
-      - 2.7 Transfrom cột location sang longitude với latitude
-
-#### 2.4.3.3. Load Dữ liệu vào file merged data.csv.
+**Extract trích xuất dữ liệu**
+- Trích xuất dữ liệu LLM_data từ phần LLM.
+- Trích xuất dữ liệu raw_data phần raw data.
+**Transform dữ liệu**
+- Transform cột article_id từ hai nguồn dữ liệu từ dạng float sang kiểu string.
+- Transform join article_id từ hai nguồn dữ liệu raw_data và LLM_data thành merged_data.
+- Transform cột price.
+- Loại bỏ các cột giá Thỏa Thuận và transform cột giá.
+- Cài đặt miền tối thiểu cho cột Price.
+- Transform cột area.
+- Thêm cột area_per_m2
+- Transform cột date_posted từ dạng object sang kiểu datetime64
+- Transfrom cột location sang longitude với latitude
+  
+**Load Dữ liệu vào file merged data.csv**
 ### 2.4.4 Kết quả:
-* file merged_data: https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/1-CrawlData/raw_data_4_merged.csv
-  -   0   page_link            11044 non-null  object 
-  -   1   title                11043 non-null  object 
-  -   2   article_id           11043 non-null  float64
-  -   3   category             11043 non-null  object 
-  -   4   phone                11042 non-null  float64
-  -   5   district             11043 non-null  object 
-  -   6   date_posted          11043 non-null  object 
-  -   7   area                 10505 non-null  float64
-  -   8   bedroom              6797 non-null   float64
-  -   9   wc                   6463 non-null   float64
-  -   10  direction            1528 non-null   object 
-  -   11  balcony_direction    997 non-null    object 
-  -   12  description          11043 non-null  object 
-  -   13  is_real_estate_post  11036 non-null  float64
-  -   14  area_LLM             10197 non-null  float64
-  -   15  bedroom_LLM          7466 non-null   float64
-  -   16  total_room_LLm       4757 non-null   float64
-  -   17  wc_LLM               5780 non-null   float64
-  -   18  count_conveniences   11044 non-null  int64  
-  -   19  alleyway_property    7484 non-null   float64
-  -   20  under_mortgage       1809 non-null   float64
-  -   21  residential_purpose  4345 non-null   float64
-  -   22  furnished            2708 non-null   float64
-  -   23  has_lowerlevel       2652 non-null   float64
-  -   24  has_rooftop          3292 non-null   float64
-  -   25  numbers_of_floors    9687 non-null   float64
-  -   26  street_name          10102 non-null  object 
-  -   27  price                11043 non-null  float64
-  -   28  price_per_m2         10505 non-null  float64
-* hai file location : https://github.com/user-attachments/files/15845426/merged_data_with_long_lat_0_5000.csv | https://github.com/user-attachments/files/15845227/merged_data_with_long_lat_5000_10000.csv')
-  gồm các cột article_id, latitude, longitude
+* file merged_data: https://github.com/KhiemDangLe/Final-Project/blob/main/DataFolder/4_raw_data_merged.csv
+  -   0   page_link            ject 
+  -   1   title                
+  -   2   article_id           
+  -   3   category             
+  -   4   phone               
+  -   5   district             
+  -   6   date_posted          
+  -   7   area                 
+  -   8   bedroom              
+  -   9   wc                     
+  -   10  direction           
+  -   11  balcony_direction    
+  -   12  description          
+  -   13  is_real_estate_post  
+  -   14  area_LLM             
+  -   15  bedroom_LLM        
+  -   16  total_room_LLm       
+  -   17  wc_LLM               
+  -   18  count_conveniences 
+  -   19  alleyway_property    
+  -   20  under_mortgage       
+  -   21  residential_purpose 
+  -   22  furnished           
+  -   23  has_lowerlevel       
+  -   24  has_rooftop          
+  -   25  numbers_of_floors    
+  -   26  street_name          
+  -   27  price                
+  -   28  price_per_m2  
+* 2 file tọa độ chứa mã bài dăng và tọa độ 
+  - https://github.com/KhiemDangLe/Final-Project/blob/main/DataFolder/7_coordinates_by_street_name_1_5000.csv 
+  -  https://github.com/KhiemDangLe/Final-Project/blob/main/DataFolder/8_coordinates_by_street_nam_5000_end.csv
   
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
 ### 2.4.1. Sơ lược về tiền xử lý dữ liệu và phân tích khám phá dữ liệu
@@ -156,7 +157,7 @@ Thực hiện visualize để miêu tả dữ liệu
 
 ### 2.4.4. Kết quả
 * Ta sẽ nhận được bộ dữ liệu sạch, chuẩn hóa và nhất quán đảm bảo dữ liệu đã sẵn sàng cho các mô hình phân tích và học máy. Cũng như hiểu biết chi tiết về dữ liệu, thông qua các phân tích thống kê và trực quan, giúp định hướng cho việc lựa chọn và xây dựng mô hình phù hợp.
-* Link github:https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/2-PreprocessingAndEDA/preprocessed_data.csv
+* Link github: https://github.com/KhiemDangLe/Final-Project/blob/main/DataFolder/5_preprocessed_data.csv
 
 ## 2.5. Tối ưu từng mô hình
 Mỗi thành viên nhóm sẽ chịu trách nhiệm tìm hiểu, áp dụng, tối ưu các mô hình sau:
@@ -168,5 +169,5 @@ Mỗi thành viên nhóm sẽ chịu trách nhiệm tìm hiểu, áp dụng, t�
 Sau khi tối ưu các mô hình, nhóm sẽ so sánh các mô hình dựa trên các tiêu chí như: R2, MSE, thời gian chạy. Mô hình có kết quả tốt nhất sẽ được chọn để triển khai trên website
 # 3. Sản phẩm
 Sản phẩm sau khi kết thúc đồ án bao gồm:
-* Heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. Địa chỉ của ngôi nhà là tên đường được trích xuất bằng mô hình LLM từ mô tả bài đăng
+* Heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. Địa chỉ của ngôi nhà là tên đường được trích xuất bằng mô hình LLM từ mô tả bài đăng. File heatmap là các file có tên: **6_1_result_heat_map_geospatial.html**, **6_2_result_heat_map_house_address.html**
 * Website dữ đoán giá nhà dựa trên các thông tin người dùng nhập vào với mô hình có kết qủa tốt nhầt là mô hình HistGradientBoostingRegressor. Website được triển khai tại: https://huggingface.co/spaces/Khoa710200/DS_2024
