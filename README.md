@@ -52,7 +52,26 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
-mọi người thêm vào đây nha
+LLM
+### 2.3.1  Sơ lược về LLM
+* Các mô hình ngôn ngữ lớn (LLM) là các mô hình học sâu rất lớn, được đào tạo trước dựa trên một lượng dữ liệu khổng lồ. Bộ chuyển hóa cơ bản là tập hợp các mạng nơ-ron có một bộ mã hóa và một bộ giải mã với khả năng tự tập trung. Bộ mã hóa và bộ giải mã trích xuất ý nghĩa từ một chuỗi văn bản và hiểu mối quan hệ giữa các từ và cụm từ trong đó.
+### 2.3.2 Mục tiêu
+* Dùng LLM để trích xuất ra các dữ liệu dạng không cấu trúc  về thành các feature. Phục vụ cho việc train mô hình ở những giai đoạn sau đó.
+* Dùng LLM để trích xuất ra các thông tin có thể có được từ ‘description’ mà nó có thể không có trong các thông tin trên wed. Ví dụ như ta trong phần mô tả có thể có thông tin về số phòng ngủ, phòng wc trong khi phần trên không có liệt kê.
+* Dùng LLM để kiểm tra tính đúng đắn của bài đăng. Ví dụ có thể đó là một bài đăng về bán cửa sắt, vật dụng, không phải là bài đăng về bán nhà giúp việc dự đoán chính xác hơn.
+### 2.3.3 Hướng thực hiện:
+* Sử dụng API code được dùng trên Anyscale
+* Tải dữ liệu cho LLM thực hiện
+* Sử dụng các câu lệnh yêu cầu LLM trả về các thông tin theo yêu cầu dưới đây là ví dụ”
+* Dùng API được cung cấp sau đó cho LLM thực hiện encode cột ‘title’ và ‘description’ sau đó đưa về dạng Json của các thông tin như sau:
+* Sau đó truyền dữ liệu của các feature trên để tiến hành trích xuất dữ liệu.
+* Xử lí thông tin nhận được từ LLM
+* Do thông tin nhận được từ LLM không phải lúc nào cũng giống như dạng Json, nếu có đúng dạng thì nó vẫn có khả năng bị dư thừa một số thứ như ‘Below is the information you requested’ nó sẽ làm cho việc tải dữ liệu vào các cột bị lỗi. Nhóm dùng các thao tác xử lí chuỗi như Regex.
+* Load dữ liệu nhận được vào dataframe
+* Thực hiện tải kết quả nhận được vào LLM vào các file
+### 2.3.4 Kết quả
+Dữ liệu thô sau khi craw data, có thể truy cập ở đường dẫn sau: https://github.com/KhiemDangLe/Final-Project/blob/main/1-CrawlData/raw_data_3_extracted_by_LLM.csv
+
 ## 2.4. Quá trình ETL
 ### 2.4.1 Sơ Lược Về ETL:
 Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ liệu thô thành dữ liệu có ý nghĩa và có thể sử dụng được. Nó giúp đảm bảo dữ liệu được tích hợp, sạch sẽ và nhất quán, từ đó hỗ trợ việc phân tích và ra quyết định.
@@ -74,7 +93,9 @@ Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ li
       - 2.6 Transform cột date_posted từ dạng object sang kiểu datetime64
       - 2.7 Transfrom cột location sang longitude với latitude
 
-#### 3. Load Dữ liệu vào file merged data.csv.
+#### 2.4.3.3. Load Dữ liệu vào file merged data.csv.
+
+
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
 ### 2.4.1. Sơ lược về tiền xử lý dữ liệu và phân tích khám phá dữ liệu
  * Là các bước quan trọng trong quy trình xử lý và phân tích dữ liệu. Chúng giúp chuẩn bị dữ liệu và hiểu rõ hơn về dữ liệu trước khi thực hiện các mô hình phân tích hoặc học máy.  Tuy nhiên, ở phần sau của đồ án, nhóm sẽ dùng nhiều loại mô hình khác nhau để dự đoán giá nhà.Do đó, mục đích chính của quá trình tiền xử lý dữ liệu là phục vụ cho quá trình phân tích khám phá dữ liệu mà không làm thay đổi quá nhiều đặc trưng của dữ liệu.
