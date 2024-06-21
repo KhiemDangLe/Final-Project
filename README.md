@@ -12,7 +12,7 @@
 * Các file report: là các file Jupyter Notebook chứa code và báo cáo của từng phần trong quá trình thực hiện đồ án. Các file được đánh số theo thứ tự thực hiện. Các file thuộc cùng một quá trình sẽ được đánh dấu thêm bằng chỉ số phụ. Ví dụ: file 5_1_report_gradient_boosting là file báo cáo quá trình thực hiện mô hình Gradient Boosting. 
 * Các file khác, bao gồm:
   * **2_1_prompt_for_extracting.txt**: chứa prompt sử dụng để truy vấn mô hình LLM
-  * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
+  * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. Download file này để xem heatmap thông qua trình duyệt
   * **8_1_noi_dung_cac_buoi_hop.pdf**: chứa nội dung các buổi họp nhóm
   * **8_2_dong_gop_cua_cac_thanh_vien**: chứa thông tin về đóng góp của các thành viên trong nhóm
 ### 1.2. Thành viên nhóm
