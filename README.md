@@ -103,35 +103,35 @@ Quy trình ETL đóng vai trò quan trọng trong việc chuyển đổi dữ li
 #### 2.4.3.3. Load Dữ liệu vào file merged data.csv.
 ### 2.4.4 Kết quả:
 * file merged_data: https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/1-CrawlData/raw_data_4_merged.csv
-             0   page_link            11044 non-null  object 
-             1   title                11043 non-null  object 
-             2   article_id           11043 non-null  float64
-             3   category             11043 non-null  object 
-             4   phone                11042 non-null  float64
-             5   district             11043 non-null  object 
-             6   date_posted          11043 non-null  object 
-             7   area                 10505 non-null  float64
-             8   bedroom              6797 non-null   float64
-             9   wc                   6463 non-null   float64
-             10  direction            1528 non-null   object 
-             11  balcony_direction    997 non-null    object 
-             12  description          11043 non-null  object 
-             13  is_real_estate_post  11036 non-null  float64
-             14  area_LLM             10197 non-null  float64
-             15  bedroom_LLM          7466 non-null   float64
-             16  total_room_LLm       4757 non-null   float64
-             17  wc_LLM               5780 non-null   float64
-             18  count_conveniences   11044 non-null  int64  
-             19  alleyway_property    7484 non-null   float64
-             20  under_mortgage       1809 non-null   float64
-             21  residential_purpose  4345 non-null   float64
-             22  furnished            2708 non-null   float64
-             23  has_lowerlevel       2652 non-null   float64
-             24  has_rooftop          3292 non-null   float64
-             25  numbers_of_floors    9687 non-null   float64
-             26  street_name          10102 non-null  object 
-             27  price                11043 non-null  float64
-             28  price_per_m2         10505 non-null  float64
+          *   0   page_link            11044 non-null  object 
+          *   1   title                11043 non-null  object 
+          *   2   article_id           11043 non-null  float64
+          *   3   category             11043 non-null  object 
+          *   4   phone                11042 non-null  float64
+          *   5   district             11043 non-null  object 
+          *   6   date_posted          11043 non-null  object 
+          *   7   area                 10505 non-null  float64
+          *   8   bedroom              6797 non-null   float64
+          *   9   wc                   6463 non-null   float64
+          *   10  direction            1528 non-null   object 
+          *   11  balcony_direction    997 non-null    object 
+          *   12  description          11043 non-null  object 
+          *   13  is_real_estate_post  11036 non-null  float64
+          *   14  area_LLM             10197 non-null  float64
+          *   15  bedroom_LLM          7466 non-null   float64
+          *   16  total_room_LLm       4757 non-null   float64
+          *   17  wc_LLM               5780 non-null   float64
+          *   18  count_conveniences   11044 non-null  int64  
+          *   19  alleyway_property    7484 non-null   float64
+          *   20  under_mortgage       1809 non-null   float64
+          *   21  residential_purpose  4345 non-null   float64
+          *   22  furnished            2708 non-null   float64
+          *   23  has_lowerlevel       2652 non-null   float64
+          *   24  has_rooftop          3292 non-null   float64
+          *   25  numbers_of_floors    9687 non-null   float64
+          *   26  street_name          10102 non-null  object 
+          *   27  price                11043 non-null  float64
+          *   28  price_per_m2         10505 non-null  float64
 * hai file location : https://github.com/user-attachments/files/15845426/merged_data_with_long_lat_0_5000.csv | https://github.com/user-attachments/files/15845227/merged_data_with_long_lat_5000_10000.csv')
   gồm các cột article_id, latitude, longitude
   
