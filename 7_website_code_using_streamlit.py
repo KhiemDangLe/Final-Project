@@ -6,16 +6,16 @@ from sklearn.preprocessing import FunctionTransformer
 from sklearn.ensemble import HistGradientBoostingRegressor
 
 # Load the data
-data = pd.read_csv('https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/2-PreprocessingAndEDA/preprocessed_data.csv')
-df_location = pd.read_csv('https://github.com/user-attachments/files/15845426/merged_data_with_long_lat_0_5000.csv')
-df_location2 = pd.read_csv('https://github.com/user-attachments/files/15845227/merged_data_with_long_lat_5000_10000.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/DataFolder/5_preprocessed_data.csv')
+df_location = pd.read_csv('https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/DataFolder/7_coordinates_by_street_name_1_5000.csv')
+df_location2 = pd.read_csv('https://raw.githubusercontent.com/KhiemDangLe/Final-Project/main/DataFolder/8_coordinates_by_street_nam_5000_end.csv')
 
 # Merge datasets
-merged_df1 = pd.merge(data, df_location[['article_id', 'longitude', 'latitude']], on 'article_id', how='inner')
-merged_df2 = pd.merge(data, df_location2[['article_id', 'longitude', 'latitude']], on 'article_id', how='inner')
+merged_df1 = pd.merge(data, df_location[['article_id', 'longitude', 'latitude']], on='article_id', how='inner')
+merged_df2 = pd.merge(data, df_location2[['article_id', 'longitude', 'latitude']], on='article_id', how='inner')
 merged_df = pd.concat([merged_df1, merged_df2], ignore_index=True)
 
-# Separate features and target
+# Split data into features and target variable
 y = merged_df['price'].copy()
 X = merged_df.drop('price', axis=1).copy()
 
@@ -113,7 +113,7 @@ input_data['district'] = st.sidebar.selectbox('District', X['district'].unique()
 input_data['bedroom'] = st.sidebar.number_input('Number of Bedrooms', min_value=0, step=1, format="%d")
 input_data['wc'] = st.sidebar.number_input('Number of Bathrooms', min_value=0, step=1, format="%d")
 input_data['numbers_of_floors'] = st.sidebar.number_input('Number of Floors', min_value=0, step=1, format="%d")
-input_data['count_conveniences'] = st.sidebar.number_input('Number of Conveniences', min_value=0, step=1, format="%d")
+input_data['count_conveniences'] = 0  # Set default value and hide the field
 input_data['direction'] = st.sidebar.selectbox('Direction', X['direction'].unique())
 input_data['has_rooftop'] = st.sidebar.checkbox('Rooftop', value=False)
 input_data['total_room_LLm'] = st.sidebar.number_input('Total Rooms', min_value=0, step=1, format="%d")
