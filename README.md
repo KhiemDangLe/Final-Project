@@ -14,6 +14,7 @@
   * **2_1_prompt_for_extracting.txt**: chứa prompt sử dụng để truy vấn mô hình LLM
   * **6_1_result_heat_map_geospatial.html, 6_2_result_heat_map_house_address**: chứa heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. File này có thể mở trực tiếp trên trình duyệt để xem kết quả.
 ### 1.2. Thành viên nhóm
+#### Tên Nhóm: 
 * Vũ Đăng Khôi - 
 * Trảo An Huy - 22280041
 * Đặng Lê Khiêm - 22280045
