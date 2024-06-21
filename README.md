@@ -52,13 +52,19 @@ Dữ liệu thu được sẽ lưu trữ ở đường dẫn sau: https://raw.gi
 * balcony_direction: hướng ban công
 * description: mô tả của bài viết
 ## 2.3. Sử dụng mô hình LLM để trích xuất địa chỉ từ mô tả bài đăng
-thêm sau
+mọi người thêm vào đây nha
+## 2.4. Quá trình ETL
+mọi người thêm vào đây nha
 ## 2.4. Tiền xử lý dữ liệu và phân tích dữ liệu
-Bổ sung sau
+mọi người thêm vào đây nha
 ## 2.5. Tối ưu từng mô hình
-Bổ sung sau
-## 2.6 So sánh các mô hình
-Bổ sung sau
+Mỗi thành viên nhóm sẽ chịu trách nhiệm tìm hiểu, áp dụng, tối ưu các mô hình sau:
+* Mô hình Linear Regression, Ridge Regression, Lasso Regression: Trảo An Huy
+* Mô hình K-Nearest Neighbors: Thái Anh Khoa
+* Mô hình Gradient Boosting, Histogram Gradient Boosting: Đặng Lê Khiêm
+* Mô hình Decision Tree, Random Forest: Vũ Đăng Khôi
+## 2.6. So sánh các mô hình
+Sau khi tối ưu các mô hình, nhóm sẽ so sánh các mô hình dựa trên các tiêu chí như: R2, MSE, thời gian chạy. Mô hình có kết quả tốt nhất sẽ được chọn để triển khai trên website
 # 3. Sản phẩm
 Sản phẩm sau khi kết thúc đồ án bao gồm:
 * Heatmap thể hiện sự phân bố của nhà ở theo địa chỉ của ngôi nhà. Địa chỉ của ngôi nhà là tên đường được trích xuất bằng mô hình LLM từ mô tả bài đăng
